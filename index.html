@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dora Denk</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dora Denk is a Melbourne digital product and customer experience manager. Enterprise websites, acquisition funnels, CRO, SEO/GEO and CRM. Open to permanent roles and contracts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: a playful editorial page built on the idea of a customer journey: a hero with
+   portrait, a quiet skills strip, a grid of results, colour-coded case studies, a circular
+   creative skills board, and a dark closing band. Apple-style system type, with handwritten notes. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #121417;
+  --muted: #5b6470;
+  --line: #e2e5ea;
+  --teal: #0f766e;
+  --teal-soft: #d5f0eb;
+  --amber: #f5a524;
+  --amber-soft: #fde7bd;
+  --coral: #f2563f;
+  --coral-soft: #ffe0da;
+  --sky: #2b6fd6;
+  --sky-soft: #dcebff;
+  --on-accent: #ffffff;
+  --on-amber: #1a1306;
+  --band: #121417;
+  --band-ink: #f2f4f7;
+  --band-muted: #a1a9b4;
+
+  --f-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", "Inter", Arial, system-ui, sans-serif;
+  --f-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "Inter", Arial, system-ui, sans-serif;
+  --f-hand: "Caveat", "Bradley Hand", "Segoe Print", cursive;
+
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.1875rem;
+  --step-2: 1.5rem;
+  --step-3: clamp(2rem, 1.3rem + 2.6vw, 3.25rem);
+  --step-4: clamp(2.5rem, 1.4rem + 4.2vw, 4.75rem);
+
+  --radius: 22px;
+  --max: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0f12; --surface: #171a1f; --ink: #eef1f4; --muted: #9aa3ae; --line: #2a2f37;
+    --teal: #3fc7b6; --teal-soft: #12322f; --amber: #ffb940; --amber-soft: #3b2c10;
+    --coral: #ff8a78; --coral-soft: #3a1d19; --sky: #6aa8ff; --sky-soft: #14263f;
+    --on-accent: #0d0f12; --on-amber: #1a1306;
+    --band: #1b1f25; --band-ink: #eef1f4; --band-muted: #9aa3ae;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0f12; --surface: #171a1f; --ink: #eef1f4; --muted: #9aa3ae; --line: #2a2f37;
+  --teal: #3fc7b6; --teal-soft: #12322f; --amber: #ffb940; --amber-soft: #3b2c10;
+  --coral: #ff8a78; --coral-soft: #3a1d19; --sky: #6aa8ff; --sky-soft: #14263f;
+  --on-accent: #0d0f12; --on-amber: #1a1306;
+  --band: #1b1f25; --band-ink: #eef1f4; --band-muted: #9aa3ae;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: var(--step-0); line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+h1, h2, h3 { font-family: var(--f-display); line-height: 1.08; text-wrap: balance; margin: 0; letter-spacing: -0.02em; font-weight: 700; }
+p { margin: 0; }
+a { color: var(--teal); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 8px; }
+img { display: block; max-width: 100%; height: auto; }
+
+.wrap {
+  max-width: var(--max); margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+
+.eyebrow { font-size: var(--step--1); font-weight: 600; letter-spacing: 0.01em; color: var(--teal); }
+.hand { font-family: var(--f-hand); font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--coral); }
+.mark { background: linear-gradient(104deg, transparent 2%, var(--amber-soft) 4%, var(--amber-soft) 96%, transparent 98%) 0 88% / 100% 0.42em no-repeat; padding: 0 .08em; }
+.section { padding-block: clamp(64px, 9vw, 120px); }
+.section-head { display: grid; gap: 14px; max-width: 48rem; margin-bottom: clamp(32px, 5vw, 56px); }
+.section-head h2 { font-size: var(--step-3); letter-spacing: -0.03em; }
+.section-head p { color: var(--muted); font-size: var(--step-1); }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-display); font-weight: 700; font-size: 1.125rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.brand-mark { width: 30px; height: 30px; border-radius: 10px 10px 10px 3px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: 0.8rem; font-weight: 800; letter-spacing: -0.04em; }
+.nav-links { display: flex; gap: 22px; align-items: center; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+.nav-links a:hover { color: var(--ink); }
+@media (max-width: 780px) { .nav-links a:not(.btn) { display: none; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 0.9375rem/1 var(--f-body); text-decoration: none; cursor: pointer;
+  padding: 14px 22px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: var(--ink); color: var(--bg);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--amber); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.nav .btn { padding: 10px 16px; font-size: 0.875rem; color: var(--bg); }
+.btn .arrow { transition: transform .2s ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* ---------- Hero ---------- */
+.hero { padding-block: clamp(40px, 6vw, 80px) clamp(48px, 6vw, 72px); position: relative; }
+.hero-grid { display: grid; gap: clamp(40px, 6vw, 72px); align-items: center; }
+@media (min-width: 940px) { .hero-grid { grid-template-columns: 1.2fr 1fr; } }
+.hero-copy { display: grid; gap: 24px; min-width: 0; }
+.hello { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.status {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 14px 7px 10px; border-radius: 999px; background: var(--teal-soft); color: var(--teal);
+  font-size: 0.8125rem; font-weight: 600;
+}
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--amber) 55%, transparent); } 50% { box-shadow: 0 0 0 6px transparent; } }
+.hero h1 { font-size: var(--step-4); letter-spacing: -0.045em; line-height: 0.98; }
+.hero h1 .teal { color: var(--teal); }
+.hero h1 .squiggle { position: relative; white-space: nowrap; }
+.hero h1 .squiggle svg { position: absolute; left: 0; right: 0; bottom: -0.18em; width: 100%; height: 0.32em; overflow: visible; }
+.hero .lede { font-size: var(--step-1); color: var(--muted); max-width: 34rem; }
+.hero .lede b { color: var(--ink); font-weight: 600; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.portrait { position: relative; width: min(100%, 430px); justify-self: center; margin: 12px 0; }
+.portrait .blob-back { position: absolute; inset: 18px -18px -18px 18px; background: var(--amber-soft); border-radius: 28px; }
+.portrait img { position: relative; width: 100%; aspect-ratio: 652 / 700; object-fit: cover; border-radius: 28px; }
+.portrait figcaption {
+  position: absolute; left: -20px; bottom: 28px; max-width: 80%;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 14px; padding: 12px 16px; box-shadow: 0 14px 34px -18px rgb(0 0 0 / .3);
+  font-size: 0.875rem; line-height: 1.4;
+}
+.portrait figcaption .eyebrow { display: block; font-size: 0.6875rem; margin-bottom: 2px; }
+@media (max-width: 560px) { .portrait figcaption { left: 12px; } .portrait .blob-back { inset: 12px -8px -12px 12px; } }
+}
+
+/* ---------- Ticker ---------- */
+.ticker { border-block: 1px solid var(--line); color: var(--muted); overflow: hidden; padding-block: 16px; }
+.ticker-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
+.ticker-track span { font-family: var(--f-display); font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; padding-inline: 18px; white-space: nowrap; display: inline-flex; align-items: center; gap: 36px; }
+.ticker-track span::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Bento ---------- */
+.bento { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .bento { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: minmax(180px, auto); } }
+.tile { border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; min-width: 0; position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.tile .num { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.2rem, 1.8rem + 1.6vw, 3rem); line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--n, var(--ink)); }
+.tile p { font-size: 0.9375rem; color: var(--muted); max-width: 24ch; }
+.t-photo { grid-column: span 2; margin: 0; padding: 0; min-height: 320px; border: 0; }
+.t-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.t-photo figcaption { position: absolute; left: 16px; bottom: 16px; right: 16px; background: color-mix(in srgb, var(--surface) 92%, transparent); color: var(--ink); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 14px; padding: 12px 16px; font-size: 0.875rem; }
+.quote-foot { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; }
+.quote-foot span:last-child { color: var(--muted); font-size: 0.875rem; }
+.testimonial { margin: 0; background: var(--teal-soft); border-radius: var(--radius); padding: clamp(24px, 4vw, 48px); display: grid; gap: clamp(24px, 4vw, 48px); align-items: center; }
+@media (min-width: 900px) { .testimonial { grid-template-columns: 0.8fr 1.4fr; } }
+.testimonial-copy { display: grid; gap: 12px; justify-items: start; min-width: 0; }
+.testimonial-copy h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); letter-spacing: -0.03em; }
+.testimonial-copy p { color: var(--muted); }
+.award { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); color: var(--ink); font-weight: 700; font-size: 0.875rem; padding: 7px 14px 7px 10px; border-radius: 999px; }
+.award svg { width: 16px; height: 16px; fill: var(--amber); }
+.kudos { margin: 0; min-width: 0; transform: rotate(-1.2deg); }
+.kudos-card { background: var(--surface); border-radius: 18px; padding: clamp(22px, 3.5vw, 36px); display: grid; gap: 18px; box-shadow: 0 2px 4px rgb(0 0 0 / .06), 0 24px 48px -20px rgb(0 0 0 / .3); border-top: 6px solid var(--amber); }
+.kudos-head { display: flex; align-items: center; gap: 14px; }
+.kudos-badge { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--amber); color: var(--on-amber); display: grid; place-items: center; font-size: 1.5rem; }
+.kudos-label { display: block; font-size: .95rem; font-weight: 600; color: var(--muted); letter-spacing: .01em; }
+.kudos-title { display: block; font-size: clamp(1.25rem, 1.1rem + .6vw, 1.6rem); letter-spacing: -0.02em; color: var(--ink); }
+.kudos blockquote { margin: 0; font-size: 1.05rem; line-height: 1.65; color: var(--ink); }
+.kudos-from { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+.kudos-from b { display: block; color: var(--ink); }
+.kudos-avatar { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--teal-soft); color: var(--teal); display: grid; place-items: center; font-weight: 700; }
+.shot { margin: 0; min-width: 0; transform: rotate(-1.2deg); }
+.shot img { width: 100%; border-radius: 10px; border: 6px solid #ffffff; box-shadow: 0 2px 4px rgb(0 0 0 / .08), 0 24px 48px -20px rgb(0 0 0 / .35); background: #f0f0f0; }
+.shot figcaption { margin-top: 14px; font-family: var(--f-hand); font-weight: 700; font-size: 1.5rem; color: var(--teal); transform: rotate(1.2deg); }
+.t-quote { grid-column: span 2; background: var(--teal-soft); border-color: transparent; justify-content: center; gap: 24px; padding: clamp(24px, 3vw, 40px); }
+.t-quote blockquote { margin: 0; font-family: var(--f-display); font-size: clamp(1.2rem, 1rem + .8vw, 1.5rem); font-weight: 600; line-height: 1.3; letter-spacing: -0.02em; color: var(--ink); }
+.t-quote .hand { font-size: 1.4rem; color: var(--teal); }
+
+/* ---------- About ---------- */
+.about { display: grid; gap: clamp(28px, 5vw, 64px); }
+@media (min-width: 900px) { .about { grid-template-columns: 1.1fr 1fr; align-items: start; } }
+.about .big { font-family: var(--f-display); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; }
+.about-text { display: grid; gap: 18px; font-size: 1.0625rem; min-width: 0; }
+.about-text p { color: var(--muted); }
+.about-text .lead-in { color: var(--ink); font-size: var(--step-1); line-height: 1.55; }
+.path { display: grid; gap: 0; margin-top: 8px; position: relative; }
+.step { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; padding-bottom: 22px; position: relative; }
+.step:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 44px; bottom: 0; border-left: 2px dashed var(--line); }
+.step .ico { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-weight: 800; font-size: 0.9rem; }
+.step:nth-child(1) .ico { background: var(--sky-soft); color: var(--sky); }
+.step:nth-child(2) .ico { background: var(--coral-soft); color: var(--coral); }
+.step:nth-child(3) .ico { background: var(--teal); color: var(--on-accent); }
+.step b { display: block; font-family: var(--f-display); font-size: 1.0625rem; }
+.step span { color: var(--muted); font-size: 0.9375rem; }
+.outside { margin-top: 10px; background: var(--amber-soft); border-radius: 18px; padding: 18px 20px; display: grid; gap: 6px; }
+.outside .hand { color: var(--ink); font-size: 1.5rem; }
+.outside p { color: var(--ink); }
+
+/* ---------- Work ---------- */
+.work-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .work-grid { grid-template-columns: 1fr 1fr; } }
+.case {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; display: flex; flex-direction: column; min-width: 0;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.case:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -28px rgb(0 0 0 / .45); }
+.case-top { padding: 22px 24px; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; min-height: 120px; position: relative; }
+.case-top .big { font-family: var(--f-display); font-weight: 800; font-size: 3rem; line-height: .9; letter-spacing: -0.05em; }
+.case-top .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.01em; text-align: right; opacity: .8; }
+.c-coral .case-top { background: var(--coral-soft); color: var(--coral); }
+.c-amber .case-top { background: var(--amber-soft); color: var(--ink); }
+.c-amber .case-top .big { color: var(--ink); }
+.c-teal .case-top { background: var(--teal-soft); color: var(--teal); }
+.c-sky .case-top { background: var(--sky-soft); color: var(--sky); }
+.c-ink .case-top { background: var(--band); color: var(--band-ink); }
+.c-amberfill .case-top { background: var(--amber); color: var(--on-amber); }
+.case-body { padding: 22px 24px 26px; display: grid; gap: 10px; align-content: start; }
+.case .org { font-size: 0.75rem; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
+.case h3 { font-size: 1.3125rem; letter-spacing: -0.02em; }
+.case p { color: var(--muted); font-size: 0.9375rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.75rem; font-weight: 600; color: var(--ink); background: var(--bg); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; }
+
+/* Funnel feature */
+.funnel-card {
+  grid-column: 1 / -1; display: grid; gap: 28px; position: relative;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 44px);
+}
+@media (min-width: 900px) { .funnel-card { grid-template-columns: 1fr 1.1fr; align-items: center; } }
+.funnel-card .copy { display: grid; gap: 14px; min-width: 0; }
+.funnel-card .eyebrow { color: var(--teal); }
+.funnel-card h3 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem); letter-spacing: -0.03em; }
+.funnel-card .copy p { color: var(--muted); }
+.funnel-card { margin-top: 22px; }
+.funnel-card .note { position: absolute; top: -30px; right: 28px; transform: rotate(4deg); color: var(--coral); }
+.funnel { font-size: 0.8125rem; background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 8px; min-width: 0; }
+.funnel-head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; color: var(--muted); margin-bottom: 8px; }
+.funnel-head b { color: var(--teal); font-weight: 600; }
+.f-row { display: grid; grid-template-columns: 9.5rem 1fr; gap: 12px; align-items: center; }
+.f-label { color: var(--muted); }
+.f-track { display: flex; justify-content: center; }
+.f-bar { height: 30px; border-radius: 8px; background: color-mix(in srgb, var(--teal) var(--o), transparent); }
+.f-row.drop .f-label { color: var(--ink); font-weight: 600; }
+.f-row.drop .f-bar { background: var(--amber); }
+.f-foot { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; color: var(--muted); }
+.f-foot .hand { font-size: 1.25rem; color: var(--coral); }
+@media (max-width: 460px) { .f-row { grid-template-columns: 1fr; gap: 4px; } .f-track { justify-content: flex-start; } }
+.case.wide { grid-column: 1 / -1; }
+@media (min-width: 760px) { .case.wide { display: grid; grid-template-columns: minmax(240px, 1fr) 2fr; } .case.wide .case-top { min-height: 0; } }
+
+/* Experiment readout */
+.readout {
+  grid-column: 1 / -1; display: grid; gap: 28px; position: relative;
+  background: var(--band); color: var(--band-ink); border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 44px);
+}
+@media (min-width: 900px) { .readout { grid-template-columns: 1fr 1.1fr; align-items: center; } }
+.readout .copy { display: grid; gap: 14px; min-width: 0; }
+.readout .eyebrow { color: var(--amber); }
+.readout h3 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem); letter-spacing: -0.03em; }
+.readout .copy p { color: var(--band-muted); }
+.readout .tag { background: transparent; color: var(--band-ink); border-color: color-mix(in srgb, var(--band-ink) 25%, transparent); }
+.readout .note { position: absolute; top: -26px; right: 28px; transform: rotate(4deg); color: var(--coral); }
+.panel { font-size: 0.8125rem; background: color-mix(in srgb, var(--band-ink) 6%, transparent); border: 1px solid color-mix(in srgb, var(--band-ink) 14%, transparent); border-radius: 16px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
+.panel-head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; color: var(--band-muted); }
+.sig { color: var(--teal); font-weight: 600; }
+.bars { display: grid; gap: 14px; }
+.bar-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 12px; align-items: center; }
+@media (max-width: 460px) { .bar-row { grid-template-columns: 1fr; gap: 4px; } }
+.bar-label { color: var(--band-muted); }
+.bar-track { height: 30px; background: color-mix(in srgb, var(--band-ink) 8%, transparent); border-radius: 8px; position: relative; overflow: hidden; }
+.bar-fill { position: absolute; inset: 0 auto 0 0; border-radius: 8px; background: color-mix(in srgb, var(--band-ink) 28%, transparent); display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: var(--band-ink); }
+.bar-fill.win { background: var(--amber); color: var(--on-amber); font-weight: 700; }
+.panel-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; border-top: 1px solid color-mix(in srgb, var(--band-ink) 14%, transparent); padding-top: 16px; }
+.panel-stats div { display: grid; gap: 2px; color: var(--band-muted); }
+.panel-stats b { font-family: var(--f-display); font-size: 1.5rem; letter-spacing: -0.03em; color: var(--band-ink); font-variant-numeric: tabular-nums; }
+.panel-stats b.up { color: var(--amber); }
+@media (max-width: 460px) { .panel-stats { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Creative skills ---------- */
+.creative { display: grid; gap: 28px; align-items: start; }
+@media (min-width: 960px) { .creative { grid-template-columns: 1.15fr 1fr; } }
+.artboard { --d-ink: #2b2766; --d-peach: #ff8a65; --d-sun: #f9c74f; --d-lilac: #c9b6f2; --d-cream: #fff4e8; position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 2px 4px rgb(0 0 0 / .04), 0 30px 60px -30px rgb(0 0 0 / .35); overflow: visible; }
+.ab-top { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.78rem; color: var(--muted); }
+.ab-top .dots { display: flex; gap: 6px; }
+.ab-top .dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
+.ab-top .dots i:nth-child(2) { background: var(--amber); }
+.ab-top .dots i:nth-child(3) { background: var(--teal); }
+.ab-top .file { font-weight: 600; color: var(--ink); }
+.ab-top .zoom { margin-left: auto; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
+.canvas { padding: 18px; display: grid; gap: 12px; background-color: var(--bg); background-image: radial-gradient(color-mix(in srgb, var(--ink) 14%, transparent) 1px, transparent 1px); background-size: 16px 16px; border-radius: 0 0 var(--radius) var(--radius); }
+.board { display: grid; gap: 12px; grid-template-columns: 1.25fr 1fr; }
+.board > div { border-radius: 16px; min-width: 0; }
+.post { position: relative; overflow: hidden; grid-row: span 2; background: var(--d-ink); color: var(--d-cream); padding: 20px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; min-height: 260px; box-shadow: 0 12px 24px -14px rgb(0 0 0 / .4); }
+.post .blob { position: absolute; border-radius: 50%; }
+.post .b1 { width: 120px; height: 120px; background: var(--d-peach); top: -36px; right: -30px; }
+.post .b2 { width: 48px; height: 48px; background: var(--d-sun); top: 66px; right: 86px; border-radius: 50% 50% 50% 0; }
+.post .squig { position: absolute; top: 22px; left: 20px; width: 64px; height: 18px; fill: none; stroke: var(--d-lilac); stroke-width: 3; stroke-linecap: round; }
+.post .sel { position: relative; align-self: flex-start; width: fit-content; outline: 1.5px solid var(--d-lilac); outline-offset: 6px; }
+.post .sel > i { position: absolute; width: 8px; height: 8px; background: #fff; border: 1.5px solid var(--d-lilac); }
+.post .sel > i:nth-of-type(1) { top: -11px; left: -11px; } .post .sel > i:nth-of-type(2) { top: -11px; right: -11px; }
+.post .sel > i:nth-of-type(3) { bottom: -11px; left: -11px; } .post .sel > i:nth-of-type(4) { bottom: -11px; right: -11px; }
+.post b { display: block; font-family: var(--f-display); font-size: clamp(1.5rem, 1rem + 1.1vw, 1.9rem); line-height: 1; letter-spacing: -0.04em; }
+.post small { font-size: 0.78rem; font-weight: 600; opacity: .8; }
+.cursor { position: absolute; z-index: 2; right: 12px; bottom: 8px; display: flex; align-items: flex-start; gap: 2px; pointer-events: none; }
+.cursor svg { width: 18px; height: 18px; fill: var(--d-peach); stroke: #fff; stroke-width: 1.5; }
+.cursor span { margin-top: 14px; background: var(--d-peach); color: var(--d-ink); font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 999px 999px 999px 4px; }
+.type-spec { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; display: grid; gap: 4px; }
+.type-spec b { font-family: var(--f-display); font-size: 2.6rem; line-height: 1; letter-spacing: -0.04em; }
+.type-spec small { font-size: 0.75rem; color: var(--muted); }
+.type-spec .hand { font-size: 1.3rem; color: var(--d-peach); line-height: 1; }
+.ui-mini { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.ui-mini .row { display: flex; align-items: center; gap: 8px; }
+.ui-mini .av { width: 22px; height: 22px; border-radius: 50%; background: var(--d-lilac); border: 2px solid var(--d-ink); flex: none; }
+.ui-mini .ln { display: block; height: 8px; border-radius: 4px; background: var(--line); }
+.ui-mini .row .ln { flex: 1; height: 10px; background: color-mix(in srgb, var(--ink) 22%, transparent); }
+.ui-mini .btns { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.ui-mini .btn { font-size: 0.72rem; font-weight: 700; background: var(--d-ink); color: var(--d-cream); padding: 5px 12px; border-radius: 999px; }
+.ui-mini .tog { width: 30px; height: 18px; border-radius: 999px; background: var(--d-peach); position: relative; }
+.ui-mini .tog::after { content: ""; position: absolute; top: 2px; right: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+.swatches { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; }
+.swatches small { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+.swatches .sw { display: flex; }
+.swatches .sw i { width: 28px; height: 28px; border-radius: 50%; background: var(--c); border: 2px solid var(--surface); box-shadow: inset 0 0 0 1px rgb(0 0 0 / .08); margin-left: -6px; }
+.swatches .sw i:first-child { margin-left: 0; }
+.swatches .aa { margin-left: auto; white-space: nowrap; font-size: 0.72rem; font-weight: 700; color: var(--d-ink); background: var(--d-lilac); padding: 3px 8px; border-radius: 999px; }
+.artboard .note { position: absolute; bottom: -22px; right: 22px; transform: rotate(-3deg); color: var(--coral); font-size: 1.4rem; }
+@media (max-width: 460px) { .board { grid-template-columns: 1fr; } .post { grid-row: auto; min-height: 220px; } .cursor { display: none; } .ab-top .zoom { display: none; } }
+.craft { display: grid; gap: 14px; }
+.craft-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; display: grid; gap: 10px; align-content: start; }
+.craft-card .head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.craft-card h3 { font-size: 1.125rem; display: flex; align-items: center; gap: 10px; }
+.craft-card h3::before { content: ""; width: 12px; height: 12px; border-radius: 4px; transform: rotate(45deg); background: var(--c); }
+.craft-card p { color: var(--muted); font-size: 0.9375rem; }
+.craft-card .tag { font-size: 0.75rem; }
+.expert { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--amber); color: var(--on-amber); }
+
+/* ---------- Experience ---------- */
+.timeline { display: grid; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 11px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--teal), var(--amber), var(--coral), var(--sky)); border-radius: 2px; }
+.role { display: grid; gap: 8px 40px; padding: 0 0 40px 48px; position: relative; }
+.role:last-child { padding-bottom: 0; }
+.role::before { content: ""; position: absolute; left: 2px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--bg); border: 4px solid var(--rc, var(--teal)); }
+@media (min-width: 860px) { .role { grid-template-columns: 14rem 1fr; } }
+.role .when { font-size: 0.875rem; color: var(--muted); display: grid; gap: 4px; align-content: start; }
+.role .when b { color: var(--ink); font-weight: 700; font-size: 0.9375rem; }
+.role .what { display: grid; gap: 10px; min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; }
+.role h3 { font-size: 1.25rem; }
+.role .org { color: var(--muted); font-size: 0.9375rem; }
+.role .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px 14px; flex-wrap: wrap; }
+.role .type { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.01em; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--rc) 14%, transparent); color: var(--ink); white-space: nowrap; }
+.role .summary { color: var(--ink); }
+.role .cols { display: grid; gap: 18px; margin-top: 4px; }
+@media (min-width: 980px) { .role .cols.two { grid-template-columns: 1.35fr 1fr; gap: 28px; } }
+.role h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.01em; color: var(--muted); margin: 0 0 8px; }
+.role ul li { color: var(--muted); font-size: 0.9375rem; }
+.role ul li b { color: var(--ink); font-weight: 600; }
+.wins { list-style: none; padding: 0 !important; display: grid; gap: 8px !important; }
+.wins li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 12px; align-items: baseline; background: var(--bg); border-radius: 12px; padding: 10px 14px; }
+.wins li b { font-family: var(--f-display); font-size: 1.125rem; letter-spacing: -0.02em; color: var(--rc) !important; }
+@media (max-width: 560px) { .wins li { grid-template-columns: 1fr; gap: 2px; } .role { padding-left: 36px; } .role .what { padding: 18px; } }
+.role .tags { margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--line); }
+.snapshot { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); margin-bottom: 40px; }
+.snapshot div { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--sc); border-radius: 16px; padding: 16px 18px; display: grid; gap: 4px; }
+.snapshot .k { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.01em; color: var(--muted); }
+.snapshot b { font-family: var(--f-display); font-size: 1.0625rem; }
+.snapshot span:last-child { color: var(--muted); font-size: 0.875rem; }
+.role.minor .what { background: transparent; border-style: dashed; }
+.role ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+.role li::marker { color: var(--rc, var(--teal)); }
+.role .what > .tags .tag { font-size: 0.75rem; }
+
+/* ---------- Skills ---------- */
+.skills { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+.skill-group { border-radius: var(--radius); padding: 24px; display: grid; gap: 14px; align-content: start; background: var(--sg); }
+.skill-group h3 { font-size: 1.125rem; }
+.skill-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-group li { font-size: 0.875rem; font-weight: 500; background: var(--surface); border-radius: 999px; padding: 5px 12px; color: var(--ink); }
+.tools { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tools .lbl { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.01em; color: var(--muted); margin-right: 8px; }
+.tools .tag { font-size: 0.8125rem; padding: 6px 12px; background: var(--surface); }
+.edu { margin-top: 40px; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.edu div { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.edu b { display: block; font-family: var(--f-display); font-size: 1.0625rem; }
+.edu span { color: var(--muted); font-size: 0.875rem; }
+
+/* ---------- Contracts ---------- */
+.contract-grid { display: grid; gap: clamp(28px, 5vw, 56px); }
+.services { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.services li { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: grid; gap: 6px; align-content: start; transition: border-color .2s ease, transform .2s ease; }
+.services li:hover { border-color: var(--ink); transform: translateY(-3px); }
+.services .ico { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 6px; }
+.services .ico svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 900px) { .services { grid-template-columns: repeat(3, 1fr); } }
+.services li.wide { grid-column: 1 / -1; }
+.services .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.services .chips i { font-style: normal; font-size: 0.8rem; color: var(--ink); background: var(--amber-soft); border-radius: 999px; padding: 4px 10px; }
+.services b { font-family: var(--f-display); font-size: 1.0625rem; }
+.services span { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Contact ---------- */
+.contact { background: var(--band); color: var(--band-ink); position: relative; overflow: hidden; }
+.contact::before { content: ""; position: absolute; width: 520px; height: 520px; right: -160px; top: -200px; border-radius: 50%; background: var(--teal); opacity: .22; filter: blur(10px); }
+.contact::after { content: ""; position: absolute; width: 360px; height: 360px; left: -140px; bottom: -180px; border-radius: 50%; background: var(--coral); opacity: .18; filter: blur(10px); }
+.contact .wrap { position: relative; z-index: 1; }
+.contact .eyebrow { color: var(--amber); }
+.contact-grid { display: grid; gap: 40px; align-items: end; }
+@media (min-width: 940px) { .contact-grid { grid-template-columns: 1.3fr 1fr; } }
+.contact h2 { font-size: var(--step-4); letter-spacing: -0.05em; line-height: .95; margin-top: 14px; }
+.contact h2 .amber { color: var(--amber); }
+.contact p.lead { color: var(--band-muted); font-size: var(--step-1); margin-top: 18px; max-width: 34rem; }
+.contact .hand { display: inline-block; margin-top: 18px; color: var(--amber); transform: rotate(-3deg); }
+.contact-card { display: grid; gap: 12px; }
+.contact-row { display: grid; gap: 4px; padding: 16px 18px; background: color-mix(in srgb, var(--band-ink) 6%, transparent); border: 1px solid color-mix(in srgb, var(--band-ink) 14%, transparent); border-radius: 16px; min-width: 0; }
+.contact-row small { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.01em; color: var(--band-muted); }
+.contact-row .val { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 1.0625rem; font-weight: 600; overflow-wrap: anywhere; }
+.contact-row a { color: var(--band-ink); }
+.copy-btn { font: 600 0.8125rem/1 var(--f-body); background: var(--amber); color: var(--on-amber); border: 0; border-radius: 999px; padding: 9px 15px; cursor: pointer; }
+footer { color: var(--band-muted); font-size: 0.8125rem; padding-block: 28px; border-top: 1px solid color-mix(in srgb, var(--band-ink) 12%, transparent); margin-top: 72px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">DD</span>Dora Denk</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#creative">Creative</a>
+      <a href="#experience">Experience</a>
+      <a href="#contract">Contracts</a>
+      <a class="btn" href="#contact">Let's talk</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hello"><span class="status"><i aria-hidden="true"></i>Open to permanent roles &amp; contracts</span></div>
+        <h1>I turn websites and customer journeys into <span class="teal">measurable</span> <span class="teal squiggle">growth.<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 90 4, 130 12 S 220 18, 297 6" fill="none" stroke="var(--amber)" stroke-width="5" stroke-linecap="round"/></svg></span></h1>
+        <p class="lede">Hi, I'm Dora, a <b>digital product &amp; customer experience manager</b> in Melbourne. I blend marketing creativity with data and tech to build websites and journeys people enjoy using, and that businesses can measure.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#work">See my work <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <div class="blob-back" aria-hidden="true"></div>
+        <img src="img/dora-portrait.jpg" alt="Dora Denk smiling at a café table with her laptop and a coffee" width="652" height="700">
+        <figcaption><span class="eyebrow">Most recently</span>Digital Product Owner | Content &amp; Journey Growth (ANZ)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-label="What I do: customer journeys, websites, CRO and A/B testing, SEO and GEO, Salesforce CRM, analytics, go-to-market, content strategy">
+    <div class="ticker-track" aria-hidden="true">
+      <span>Customer journeys</span><span>Websites</span><span>CRO &amp; A/B testing</span><span>SEO &amp; GEO</span><span>Salesforce CRM</span><span>Analytics</span><span>Go-to-market</span><span>Content strategy</span>
+      <span>Customer journeys</span><span>Websites</span><span>CRO &amp; A/B testing</span><span>SEO &amp; GEO</span><span>Salesforce CRM</span><span>Analytics</span><span>Go-to-market</span><span>Content strategy</span>
+    </div>
+  </div>
+
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-text">
+        <span class="eyebrow">About me</span>
+        <h2 class="big">Digital product, content and web strategy for digital growth.</h2>
+        <p class="lead-in">I bring digital product, content and web strategy together to improve customer journeys, strengthen acquisition and turn customer insight into measurable growth.</p>
+        <p>My experience spans traditional and digital marketing, freelance work with SMEs, agency web and digital project management, and digital product ownership in a global B2B organisation. That breadth helps me connect customer needs with business goals, and understand how content, channels, technology and customer experience work together.</p>
+      </div>
+      <div class="about-text">
+        <div class="path" aria-label="Career path">
+          <div class="step"><span class="ico">01</span><div><b>Marketing &amp; content</b><span>Brand, campaigns and customer behaviour across traditional and digital channels.</span></div></div>
+          <div class="step"><span class="ico">02</span><div><b>Website management &amp; delivery</b><span>Strategy, content and performance across the website lifecycle, from UX and build through launch and ongoing optimisation.</span></div></div>
+          <div class="step"><span class="ico">03</span><div><b>Digital product &amp; journey growth</b><span>B2B web strategy, acquisition funnels, CRO, CRM integration and lead quality.</span></div></div>
+        </div>
+        <div class="outside">
+          <span class="hand">when I'm not at my laptop…</span>
+          <p>I'm into sport and an active outdoor life with my family and our two boys. The same habits carry over to work: show up consistently, measure progress, keep improving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Selected work</span>
+        <h2>Projects where the <span class="mark">result is on the record</span></h2>
+        <p>Enterprise product work and agency delivery. Each started with a business problem and ended with something measured.</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="readout">
+          <div class="copy">
+            <span class="eyebrow">Featured project · CRO &amp; A/B testing</span>
+            <h3>Testing what makes a business apply</h3>
+            <p>I tested a new value proposition and landing page against the existing experience to find out which moved more businesses through the application. Across about 27,500 visitors in 14 days, the new version lifted completed applicant details by 28%.</p>
+            <div class="tags"><span class="tag">CRO</span><span class="tag">A/B testing</span><span class="tag">GA4</span><span class="tag">Microsoft Clarity</span></div>
+          </div>
+          <div class="panel" role="img" aria-label="Test result: the new value proposition beat the existing one, with a 21.77% lift in primary conversion and 28% more applicant detail completions, at over 95% confidence across about 27,500 visitors in 14 days.">
+            <div class="panel-head"><span>Experiment readout</span><span class="sig">● Significant · &gt;95% confidence</span></div>
+            <div class="bars">
+              <div class="bar-row"><span class="bar-label">Existing value prop</span><div class="bar-track"><div class="bar-fill" style="width:62%">baseline</div></div></div>
+              <div class="bar-row"><span class="bar-label">New value prop</span><div class="bar-track"><div class="bar-fill win" style="width:75.5%">+21.77%</div></div></div>
+            </div>
+            <div class="panel-stats">
+              <div><b>~27,500</b>visitors</div>
+              <div><b>14</b>days</div>
+              <div><b class="up">+28%</b>applicant details completed</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="funnel-card">
+          <span class="note hand" aria-hidden="true">my favourite kind of chart ↓</span>
+          <div class="copy">
+            <span class="eyebrow">Analytics</span>
+            <h3>Mapping the acquisition funnel</h3>
+            <p>I helped build a dashboard that tracks prospects from their first website visit through lead capture and application. The full-funnel view shows teams where people drop off and what to improve next.</p>
+            <div class="tags"><span class="tag">Funnel analytics</span><span class="tag">Dashboards</span><span class="tag">GA4</span><span class="tag">Salesforce</span></div>
+          </div>
+          <div class="funnel" role="img" aria-label="Simplified acquisition funnel with six stages, from website visit to completed application. The largest drop-off is between visiting the website and starting an application.">
+            <div class="funnel-head"><span>End-to-end funnel</span><b>Visit → application</b></div>
+              <div class="f-row"><span class="f-label">Website visits</span><div class="f-track"><div class="f-bar" style="width:100%;--o:85%"></div></div></div>
+              <div class="f-row drop"><span class="f-label">Application started</span><div class="f-track"><div class="f-bar" style="width:52%;--o:70%"></div></div></div>
+              <div class="f-row"><span class="f-label">Lead details captured</span><div class="f-track"><div class="f-bar" style="width:34%;--o:55%"></div></div></div>
+              <div class="f-row"><span class="f-label">Applicant details</span><div class="f-track"><div class="f-bar" style="width:26%;--o:42%"></div></div></div>
+              <div class="f-row"><span class="f-label">Requirements &amp; terms</span><div class="f-track"><div class="f-bar" style="width:21%;--o:32%"></div></div></div>
+              <div class="f-row"><span class="f-label">Application complete</span><div class="f-track"><div class="f-bar" style="width:16%;--o:24%"></div></div></div>
+            <div class="f-foot"><span>Simplified view · real figures kept private</span><span class="hand">biggest drop → start here</span></div>
+          </div>
+        </article>
+
+        <article class="case c-coral">
+          <div class="case-top"><span class="big">CRM</span><span class="label">End-to-end<br>lead lifecycle</span></div>
+          <div class="case-body">
+            <span class="org">CRM transformation</span>
+            <h3>Rebuilding the B2B lead lifecycle in Salesforce</h3>
+            <p>I redesigned the lead process end to end, from website enquiry to Salesforce reporting. Stronger lead validation, cleaner data and a clearer handoff between marketing and sales cut duplicate leads by about 90%.</p>
+          </div>
+        </article>
+
+        <article class="case c-amber">
+          <div class="case-top"><span class="big">Journeys</span><span class="label">Two B2B<br>application flows</span></div>
+          <div class="case-body">
+            <span class="org">Customer journeys</span>
+            <h3>Optimising where applicants drop off</h3>
+            <p>Analytics, heatmaps and stakeholder feedback showed where applicants were dropping off. I coordinated website improvements, lead validation and Salesforce integration, lifting conversion by about 20%.</p>
+          </div>
+        </article>
+
+        <article class="case c-sky">
+          <div class="case-top"><span class="big">Search</span><span class="label">Google &amp;<br>AI visibility</span></div>
+          <div class="case-body">
+            <span class="org">SEO &amp; GEO</span>
+            <h3>Getting found in Google and AI search</h3>
+            <p>I led search improvements across technical SEO, content and internal linking, strengthening the brand's visibility in Google and in AI-assisted search.</p>
+          </div>
+        </article>
+
+        <article class="case c-ink">
+          <div class="case-top"><span class="big">Launch</span><span class="label">Partnership<br>go-to-market</span></div>
+          <div class="case-body">
+            <span class="org">Go-to-market</span>
+            <h3>Launching the Virgin Velocity partnership online</h3>
+            <p>I coordinated the digital launch, bringing the online proposition, website content, customer journey, technical delivery and testing together for go-live.</p>
+          </div>
+        </article>
+
+        <article class="case c-amberfill">
+          <div class="case-top"><span class="big">Delivery</span><span class="label">$150K+<br>digital builds</span></div>
+          <div class="case-body">
+            <span class="org">Web project delivery</span>
+            <h3>Leading web projects from brief to launch</h3>
+            <p>I've led website and digital projects from discovery and requirements through design, development, testing and launch, coordinating clients and multidisciplinary teams and keeping scope, timelines and delivery on track.</p>
+          </div>
+        </article>
+
+        <article class="case c-teal">
+          <div class="case-top"><span class="big">Growth</span><span class="label">SME clients<br>since 2017</span></div>
+          <div class="case-body">
+            <span class="org">Small business marketing</span>
+            <h3>Growing small businesses online</h3>
+            <p>I work directly with business owners, including Sports Conscious, on website builds, landing pages, SEO, paid media, email and social, using GA4 insights to lift engagement, leads and in-store sales.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative skills -->
+  <section class="section" id="creative" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Creative skills</span>
+        <h2>I don't just brief the design, <span class="mark">I make it</span></h2>
+        <p>I bring a designer's eye to every project, from wireframes and page layouts to campaign creative and social content, so ideas move quickly from brief to something people can see and react to.</p>
+      </div>
+      <div class="creative">
+        <div class="artboard" role="img" aria-label="A design canvas with a campaign headline, type sample, interface component and colour palette">
+          <div class="ab-top" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="file">Campaign hero</span><span>Page 1</span><span class="zoom">100%</span></div>
+          <div class="canvas" aria-hidden="true">
+            <div class="board">
+              <div class="post">
+                <span class="blob b1"></span><span class="blob b2"></span>
+                <svg class="squig" viewBox="0 0 64 18"><path d="M2 12c6-8 10-8 15 0s9 8 15 0 9-8 15 0 9 8 15 0"/></svg>
+                <div class="sel"><b>Creativity<br>with purpose.</b><i></i><i></i><i></i><i></i></div>
+                <small>Design that earns the click</small>
+                <div class="cursor"><svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.5-8L21 10z"/></svg><span>Dora</span></div>
+              </div>
+              <div class="type-spec"><b>Aa</b><small>Display · Bold</small><span class="hand">type &amp; tone</span></div>
+              <div class="ui-mini">
+                <div class="row"><span class="av"></span><span class="ln"></span></div>
+                <span class="ln"></span><span class="ln" style="width:70%"></span>
+                <div class="btns"><span class="btn">Get started</span><span class="tog"></span></div>
+              </div>
+            </div>
+            <div class="swatches"><small>Palette</small><span class="sw"><i style="--c:var(--d-ink)"></i><i style="--c:var(--d-peach)"></i><i style="--c:var(--d-sun)"></i><i style="--c:var(--d-lilac)"></i><i style="--c:var(--d-cream)"></i></span><span class="aa">AA contrast ✓</span></div>
+          </div>
+          <span class="note hand" aria-hidden="true">made in Canva ✎</span>
+        </div>
+        <div class="craft">
+          <div class="craft-card" style="--c:var(--teal)">
+            <h3>UX design</h3>
+            <p>Customer journeys, wireframes and user flows that make the next step obvious, shaped by analytics and heatmaps rather than guesswork.</p>
+            <div class="tags"><span class="tag">Journey mapping</span><span class="tag">Wireframes</span><span class="tag">User flows</span><span class="tag">Usability</span></div>
+          </div>
+          <div class="craft-card" style="--c:var(--sky)">
+            <h3>UI design</h3>
+            <p>Clean, on-brand page layouts and landing pages that are easy to scan and built to convert.</p>
+            <div class="tags"><span class="tag">Landing pages</span><span class="tag">Web layouts</span><span class="tag">Forms</span><span class="tag">Responsive design</span></div>
+          </div>
+          <div class="craft-card" style="--c:var(--coral)">
+            <h3>Graphic design</h3>
+            <p>Campaign creative, social posts, digital ads and marketing collateral with a consistent brand look, designed in Canva and ready to use.</p>
+            <div class="tags"><span class="tag">Campaign creative</span><span class="tag">Social media</span><span class="tag">Digital ads</span><span class="tag">Print &amp; collateral</span><span class="tag">Canva</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've done it</h2>
+        <p>Enterprise B2B product ownership, agency web and product delivery, and hands-on freelance marketing for small businesses.</p>
+      </div>
+      <div class="snapshot">
+        <div style="--sc:var(--teal)"><span class="k">Enterprise B2B</span><b>Digital product owner</b><span>Corpay · 2024–2026</span></div>
+        <div style="--sc:var(--amber)"><span class="k">Agency</span><b>Digital product &amp; web projects</b><span>Chook Digital, 3Phase · 2022–2024</span></div>
+        <div style="--sc:var(--sky)"><span class="k">Freelance</span><b>Marketing lead &amp; consultant</b><span>Sports Conscious, SME clients · 2017–now</span></div>
+      </div>
+      <div class="timeline">
+        <div class="role" style="--rc:var(--teal)">
+          <div class="when"><b>Jun 2024 – Aug 2026</b>Full-time · Melbourne</div>
+          <div class="what">
+            <div class="head"><h3>Digital product owner, ANZ digital experience</h3><span class="type">Enterprise B2B</span></div>
+            <span class="org">Corpay · Financial services, global B2B payments</span>
+            <p class="summary">Owned the ANZ acquisition journey across six enterprise websites, from search discovery to submitted application and Salesforce lead.</p>
+            <div class="cols two">
+              <div>
+                <h4>What I owned</h4>
+                <ul>
+                  <li><b>Websites:</b> strategy, roadmap, content and continuous optimisation for six ANZ sites.</li>
+                  <li><b>Acquisition &amp; conversion:</b> lead generation and application journeys, UX, lead quality and funnel performance.</li>
+                  <li><b>SEO &amp; GEO:</b> keyword research, technical SEO, schema, content and LLM discoverability.</li>
+                  <li><b>Measurement:</b> tracking, funnel and customer data to set priorities and shape strategy.</li>
+                  <li><b>Integrations:</b> forms, APIs, Zapier, Addressfinder and Salesforce data flows.</li>
+                  <li><b>Go-to-market:</b> digital launches for products, loyalty programs and partnerships, with sales, product, technology, risk and compliance teams.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Key results</h4>
+                <ul class="wins">
+                  <li><b>+20%</b><span>conversion on two redesigned B2B application journeys</span></li>
+                  <li><b>~90%</b><span>fewer duplicate leads through lead validation and Salesforce integration</span></li>
+                  <li><b>30–60%</b><span>conversion gains from experimentation and CRO</span></li>
+                  <li><b>Launch</b><span>digital delivery of the Virgin Velocity loyalty partnership</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tags"><span class="tag">Web strategy</span><span class="tag">SEO &amp; GEO</span><span class="tag">CRO &amp; A/B testing</span><span class="tag">Salesforce CRM</span><span class="tag">Analytics</span><span class="tag">Go-to-market</span><span class="tag">Stakeholder management</span></div>
+          </div>
+        </div>
+        <div class="role" style="--rc:var(--amber)">
+          <div class="when"><b>Nov 2022 – Feb 2024</b>Full-time · Sydney</div>
+          <div class="what">
+            <div class="head"><h3>Digital product manager</h3><span class="type">Agency</span></div>
+            <span class="org">Chook Digital Agency</span>
+            <p class="summary">Led delivery of client websites, apps and digital products, and managed a studio team of five.</p>
+            <div class="cols two">
+              <div>
+                <h4>What I owned</h4>
+                <ul>
+                  <li><b>Team:</b> daily priorities, resourcing, sprints and stand-ups across concurrent projects.</li>
+                  <li><b>Delivery:</b> scope, budgets, timelines, risks and client communication, in agile and waterfall.</li>
+                  <li><b>Experience:</b> turned customer journeys and wireframes into intuitive touchpoints.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Key results</h4>
+                <ul class="wins">
+                  <li><b>$150K+</b><span>digital projects delivered from discovery to deployment</span></li>
+                  <li><b>5</b><span>people in the multidisciplinary studio team I led</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tags"><span class="tag">Product delivery</span><span class="tag">Agile &amp; waterfall</span><span class="tag">Team leadership</span><span class="tag">UX &amp; wireframes</span><span class="tag">Budgets &amp; risk</span></div>
+          </div>
+        </div>
+        <div class="role" style="--rc:var(--coral)">
+          <div class="when"><b>Feb – Nov 2022</b>Full-time · Melbourne</div>
+          <div class="what">
+            <div class="head"><h3>Web project manager</h3><span class="type">Agency</span></div>
+            <span class="org">3Phase Marketing Agency</span>
+            <p class="summary">Managed client website projects from first brief to launch and ongoing optimisation.</p>
+            <ul>
+              <li><b>Delivery:</b> discovery, requirements, UX and design, development, testing and deployment.</li>
+              <li><b>Scoping:</b> proposals, scopes of work and functional briefs.</li>
+              <li><b>Optimisation:</b> used performance data to guide retainer clients on UX improvements.</li>
+            </ul>
+            <div class="tags"><span class="tag">Web project management</span><span class="tag">Requirements &amp; scoping</span><span class="tag">UX</span><span class="tag">Optimisation</span></div>
+          </div>
+        </div>
+        <div class="role" style="--rc:var(--coral)">
+          <div class="when"><b>2017 – present</b>Ongoing, alongside full-time roles</div>
+          <div class="what">
+            <div class="head"><h3>Marketing lead</h3><span class="type">Long-term client</span></div>
+            <span class="org">Sports Conscious</span>
+            <p class="summary">The business's go-to marketing lead for over eight years, owning every marketing initiative across digital and traditional channels, from strategy through to final artwork.</p>
+            <ul>
+              <li><b>Website:</b> built the website and run it end to end, from content and UX to updates and performance.</li>
+              <li><b>Digital campaigns:</b> EDMs, paid and organic social, Google Ads and seasonal promotions, planned and delivered in-house.</li>
+              <li><b>In-store &amp; print:</b> in-store signage, point-of-sale, brochures and marketing collateral, all designed in-house.</li>
+              <li><b>Out-of-home:</b> billboard advertising, from concept to print-ready artwork.</li>
+              <li><b>Results:</b> GA4 and campaign reporting to see what drives traffic, enquiries and in-store sales.</li>
+            </ul>
+            <div class="tags"><span class="tag">Marketing strategy</span><span class="tag">Website</span><span class="tag">EDMs</span><span class="tag">Social media</span><span class="tag">Google Ads</span><span class="tag">In-store signage</span><span class="tag">Print &amp; collateral</span><span class="tag">Billboards</span></div>
+          </div>
+        </div>
+        <div class="role" style="--rc:var(--sky)">
+          <div class="when"><b>Oct 2017 – present</b></div>
+          <div class="what">
+            <div class="head"><h3>Digital marketing consultant</h3><span class="type">Freelance</span></div>
+            <span class="org">SME clients</span>
+            <p class="summary">Hands-on digital marketing and web delivery, working directly with business owners to grow their business.</p>
+            <ul>
+              <li><b>Strategy &amp; execution:</b> website, SEO, paid media, email and social, including content and creative.</li>
+              <li><b>Web builds:</b> discovery, content planning, UX and design, development, testing, launch and optimisation.</li>
+              <li><b>Website management:</b> landing pages, content and UX to lift engagement and leads.</li>
+              <li><b>Insights:</b> GA4 and Search Console to understand customers and prioritise improvements.</li>
+            </ul>
+            <div class="tags"><span class="tag">Digital marketing</span><span class="tag">Web builds</span><span class="tag">SEO</span><span class="tag">Paid media</span><span class="tag">Email &amp; social</span><span class="tag">Content &amp; creative</span><span class="tag">GA4</span></div>
+          </div>
+        </div>
+        <div class="role minor" style="--rc:var(--muted)">
+          <div class="when"><b>Jan 2019 – present</b>Volunteer · Melbourne</div>
+          <div class="what">
+            <div class="head"><h3>Founder &amp; secretary</h3><span class="type">Community</span></div>
+            <span class="org">Community language school</span>
+            <p class="summary">Committee member of an accredited community language school, running team logistics, stakeholder communication and community outreach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Skills</span>
+        <h2>Creative and technical, <span class="mark">in the same person</span></h2>
+        <p>Most marketers lean creative or technical. I work across both, from the big idea through to the tracking tag that proves it worked.</p>
+      </div>
+      <div class="skills">
+        <div class="skill-group" style="--sg:var(--teal-soft)"><h3>Strategy &amp; experience</h3><ul><li>Digital strategy</li><li>Customer experience</li><li>Journey optimisation</li><li>Go-to-market</li><li>Customer-centred design</li><li>Product discovery</li></ul></div>
+        <div class="skill-group" style="--sg:var(--amber-soft)"><h3>Content &amp; web</h3><ul><li>Enterprise websites &amp; CMS</li><li>WordPress</li><li>SEO &amp; GEO</li><li>Landing pages</li><li>UX optimisation</li><li>Technical SEO &amp; schema</li></ul></div>
+        <div class="skill-group" style="--sg:var(--coral-soft)"><h3>Lifecycle &amp; conversion</h3><ul><li>CRM &amp; Salesforce</li><li>Lead generation funnels</li><li>Value proposition testing</li><li>A/B testing</li><li>CRO</li><li>Behavioural insights</li></ul></div>
+        <div class="skill-group" style="--sg:var(--sky-soft)"><h3>Governance &amp; delivery</h3><ul><li>Stakeholder management</li><li>Risk &amp; compliance</li><li>Requirements</li><li>Roadmaps</li><li>Agile delivery</li><li>Agency management</li></ul></div>
+      </div>
+      <div class="tools"><span class="lbl">Tools</span><span class="tag">GA4</span><span class="tag">Google Tag Manager</span><span class="tag">Google Search Console</span><span class="tag">Microsoft Clarity</span><span class="tag">Salesforce</span><span class="tag">WordPress</span><span class="tag">Canva</span><span class="tag">UTM &amp; attribution</span><span class="tag">Dashboards &amp; reporting</span></div>
+      <div class="edu">
+        <div><b>Postgraduate certificate of marketing</b><span>AQF level 8</span></div>
+        <div><b>Professional certification</b><span>Digital marketing</span></div>
+        <div><b>Bachelor's degree</b><span>Business</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contracts -->
+  <section class="section" id="contract" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contracts &amp; freelance</span>
+        <h2>Need an extra pair of hands <span class="mark">on your digital?</span></h2>
+        <p>I take on contract and project work alongside permanent roles. You work directly with a strategist who also does the work, without paying for an agency.</p>
+      </div>
+      <div class="contract-grid">
+        <ul class="services">
+          <li class="wide"><span class="ico" style="background:var(--amber);color:var(--on-amber)"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg></span><b>Digital marketing, every channel</b><span>One person to own your whole marketing mix: Google Ads, paid social, email campaigns, organic social and content. I plan it, run it and report on what's working.</span><span class="chips"><i>Google Ads</i><i>Paid social</i><i>EDMs</i><i>Organic social</i><i>Content</i></span></li>
+          <li><span class="ico" style="background:var(--teal-soft);color:var(--teal)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg></span><b>Website strategy &amp; builds</b><span>Discovery, design and launch, mostly on WordPress, plus the techy parts.</span></li>
+          <li><span class="ico" style="background:var(--sky-soft);color:var(--sky)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><b>SEO &amp; GEO</b><span>Found on Google and cited by AI assistants.</span></li>
+          <li><span class="ico" style="background:var(--amber-soft);color:var(--ink)"><svg viewBox="0 0 24 24"><path d="M4 18l5-5 4 4 7-8"/><path d="M15 9h5v5"/></svg></span><b>Conversion optimisation</b><span>Landing pages, funnels and A/B tests that turn visitors into enquiries.</span></li>
+          <li><span class="ico" style="background:var(--coral-soft);color:var(--coral)"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b>Analytics &amp; tracking</b><span>GA4, Tag Manager and dashboards set up properly.</span></li>
+          <li><span class="ico" style="background:var(--teal-soft);color:var(--teal)"><svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></span><b>CRM &amp; lead management</b><span>Cleaner lead flows and reporting your sales team trusts.</span></li>
+          <li><span class="ico" style="background:var(--sky-soft);color:var(--sky)"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span><b>Interim product or web lead</b><span>Cover for a gap, a launch or a migration.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recognition -->
+  <section class="section" style="padding-top:0" aria-label="What my colleagues say">
+    <div class="wrap">
+      <div class="testimonial">
+        <div class="testimonial-copy">
+          <h3>What my colleagues say</h3>
+          <p>A recognition Daniel, my Sales Manager, sent me at work. I'm proud of this one because it's about how I work, not only what I deliver.</p>
+        </div>
+        <figure class="kudos">
+          <div class="kudos-card">
+            <div class="kudos-head">
+              <span class="kudos-badge" aria-hidden="true">★</span>
+              <span class="kudos-label">Recognition</span>
+            </div>
+            <blockquote>Dora is a high achiever whose impact speaks louder than words. Thank you for consistently being super helpful, tackling tasks quickly, and approaching every challenge with a calm confidence. Your willingness to lend a hand no matter how big or small the request doesn’t go unnoticed. Your dedication, reliability, and humble excellence make you a true silent superstar. I appreciate you!</blockquote>
+            <figcaption class="kudos-from"><span class="kudos-avatar" aria-hidden="true">D</span><span><b>Daniel</b>Sales Manager</span></figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2>Let's build something that <span class="amber">converts.</span></h2>
+          <p class="lead">Hiring for a digital product, website, CX or marketing operations role? Need help with a project? Send me a note and I'll get back to you.</p>
+          <span class="hand">coffee's on me ✎</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row">
+            <small>Email</small>
+            <div class="val"><span id="email">doradenkdigital@gmail.com</span><button class="copy-btn" id="copy-email" type="button">Copy</button></div>
+          </div>
+          <div class="contact-row">
+            <small>LinkedIn</small>
+            <div class="val"><a href="https://www.linkedin.com/in/dora-denk-88154921/" target="_blank" rel="noopener">linkedin.com/in/dora-denk</a></div>
+          </div>
+          <div class="contact-row">
+            <small>Location</small>
+            <div class="val">McKinnon, Melbourne · open to hybrid and remote</div>
+          </div>
+        </div>
+      </div>
+      <footer><span>© 2026 Dora Denk</span><span>Digital product &amp; customer experience · Melbourne</span></footer>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = email.textContent.trim();
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      done('Selected');
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
