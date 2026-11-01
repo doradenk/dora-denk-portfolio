@@ -317,6 +317,7 @@ img { display: block; max-width: 100%; height: auto; }
 /* ---------- Creative skills ---------- */
 .creative { display: grid; gap: 28px; align-items: start; }
 @media (min-width: 960px) { .creative { grid-template-columns: 1.15fr 1fr; } }
+@media (max-width: 640px) { .creative .artboard { display: none; } }
 .artboard { --d-ink: #2b2766; --d-peach: #ff8a65; --d-sun: #f9c74f; --d-lilac: #c9b6f2; --d-cream: #fff4e8; position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 2px 4px rgb(0 0 0 / .04), 0 30px 60px -30px rgb(0 0 0 / .35); overflow: visible; }
 .ab-top { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.78rem; color: var(--muted); }
 .ab-top .dots { display: flex; gap: 6px; }
