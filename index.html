@@ -314,6 +314,23 @@ img { display: block; max-width: 100%; height: auto; }
 .panel-stats b.up { color: var(--amber); }
 @media (max-width: 460px) { .panel-stats { grid-template-columns: 1fr 1fr; } }
 
+/* ---------- Stakeholders ---------- */
+.stake-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+@media (min-width: 960px) { .stake-grid { grid-template-columns: repeat(3, 1fr); } }
+.stake { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; display: grid; gap: 8px; align-content: start; }
+.stake .who { display: flex; align-items: center; gap: 12px; }
+.stake .who i { flex: none; width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; background: var(--c-soft); color: var(--c); font-style: normal; }
+.stake .who svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.stake h3 { font-size: 1.0625rem; }
+.stake p { color: var(--muted); font-size: 0.9375rem; }
+.align { margin-top: 18px; background: var(--band); color: var(--band-ink); border-radius: var(--radius); padding: clamp(22px, 3.5vw, 32px); display: grid; gap: 18px; }
+.align h3 { font-size: 1.125rem; }
+.align ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); counter-reset: s; }
+.align li { counter-increment: s; display: grid; gap: 4px; padding-top: 12px; border-top: 2px solid color-mix(in srgb, var(--band-ink) 18%, transparent); }
+.align li::before { content: "0" counter(s); font-size: 0.75rem; font-weight: 700; color: var(--amber); }
+.align b { font-family: var(--f-display); font-size: 1rem; }
+.align span { color: var(--band-muted); font-size: 0.875rem; }
+
 /* ---------- Creative skills ---------- */
 .creative { display: grid; gap: 28px; align-items: start; }
 @media (min-width: 960px) { .creative { grid-template-columns: 1.15fr 1fr; } }
@@ -399,8 +416,9 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 560px) { .wins li { grid-template-columns: 1fr; gap: 2px; } .role { padding-left: 36px; } .role .what { padding: 18px; } }
 .role .tags { margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--line); }
 .snapshot { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); margin-bottom: 40px; }
-.snapshot div { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--sc); border-radius: 16px; padding: 16px 18px; display: grid; gap: 4px; }
-.snapshot .k { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.01em; color: var(--muted); }
+.snapshot div { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--sc); border-radius: 16px; padding: 20px 22px; display: grid; gap: 4px; align-content: start; }
+.snapshot .num { display: flex; align-items: baseline; gap: 6px; font-family: var(--f-display); font-weight: 700; font-size: clamp(2.25rem, 1.9rem + 1.2vw, 3rem); line-height: 1; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 6px; }
+.snapshot .num small { font-size: 0.9375rem; font-weight: 600; letter-spacing: 0; color: var(--muted); }
 .snapshot b { font-family: var(--f-display); font-size: 1.0625rem; }
 .snapshot span:last-child { color: var(--muted); font-size: 0.875rem; }
 .role.minor .what { background: transparent; border-style: dashed; }
@@ -708,6 +726,34 @@ footer { color: var(--band-muted); font-size: 0.8125rem; padding-block: 28px; bo
     </div>
   </section>
 
+  <!-- Stakeholders -->
+  <section class="section" id="stakeholders" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Stakeholder management</span>
+        <h2>Getting everyone to <span class="mark">yes</span>, from sales to compliance</h2>
+        <p>Digital work succeeds or stalls on alignment. I work across teams with different priorities and translate between them, so decisions get made and launches ship.</p>
+      </div>
+      <div class="stake-grid">
+        <div class="stake" style="--c:var(--teal);--c-soft:var(--teal-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><path d="M4 18l5-5 4 4 7-8"/><path d="M15 9h5v5"/></svg></i><h3>Sales &amp; business development</h3></div><p>Turned their feedback into cleaner lead flows and Salesforce reporting they trust.</p></div>
+        <div class="stake" style="--c:var(--sky);--c-soft:var(--sky-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M9 9l-2 2 2 2M15 9l2 2-2 2"/></svg></i><h3>Product &amp; technology</h3></div><p>Translated business needs into clear requirements, user stories and release priorities.</p></div>
+        <div class="stake" style="--c:var(--coral);--c-soft:var(--coral-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i><h3>Risk, legal &amp; compliance</h3></div><p>Brought them in early, so content and journeys met requirements before launch, not after.</p></div>
+        <div class="stake" style="--c:var(--ink);--c-soft:var(--amber-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg></i><h3>Partners &amp; external brands</h3></div><p>Aligned launch timing, brand approvals and messaging with partners such as Virgin Velocity.</p></div>
+        <div class="stake" style="--c:var(--teal);--c-soft:var(--teal-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12 6l6 6"/></svg></i><h3>Agencies, designers &amp; developers</h3></div><p>Briefed and managed delivery teams to agreed scope, budget and timeline.</p></div>
+        <div class="stake" style="--c:var(--sky);--c-soft:var(--sky-soft)"><div class="who"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></i><h3>Business owners &amp; leadership</h3></div><p>Kept decision-makers across progress with plain-English updates and clear trade-offs.</p></div>
+      </div>
+      <div class="align">
+        <h3>How I keep everyone aligned</h3>
+        <ol>
+          <li><b>Listen early</b><span>Understand each team's goals and constraints before anything is designed.</span></li>
+          <li><b>Translate</b><span>Turn competing asks into one shared brief everyone can sign off.</span></li>
+          <li><b>Make trade-offs visible</b><span>Show the options, the impact and a recommendation, so decisions are quick.</span></li>
+          <li><b>Keep the loop closed</b><span>Regular updates and results reporting, so no one is surprised.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
   <!-- Experience -->
   <section class="section" id="experience" style="padding-top:0">
     <div class="wrap">
@@ -717,9 +763,9 @@ footer { color: var(--band-muted); font-size: 0.8125rem; padding-block: 28px; bo
         <p>Enterprise B2B product ownership, agency web and product delivery, and hands-on freelance marketing for small businesses.</p>
       </div>
       <div class="snapshot">
-        <div style="--sc:var(--teal)"><span class="k">Enterprise B2B</span><b>Digital product owner</b><span>Corpay · 2024–2026</span></div>
-        <div style="--sc:var(--amber)"><span class="k">Agency</span><b>Digital product &amp; web projects</b><span>Chook Digital, 3Phase · 2022–2024</span></div>
-        <div style="--sc:var(--sky)"><span class="k">Freelance</span><b>Marketing lead &amp; consultant</b><span>Sports Conscious, SME clients · 2017–now</span></div>
+        <div style="--sc:var(--teal)"><span class="num">8+<small>years</small></span><b>Digital marketing</b><span>Paid, organic, email and content for Sports Conscious and SME clients.</span></div>
+        <div style="--sc:var(--amber)"><span class="num">5+<small>years</small></span><b>Web product ownership</b><span>Strategy, builds and delivery at Corpay, Chook Digital and 3Phase, plus freelance websites.</span></div>
+        <div style="--sc:var(--sky)"><span class="num">2+<small>years</small></span><b>Digital funnels &amp; journey growth</b><span>Acquisition funnels, CRO and CRM integration at Corpay.</span></div>
       </div>
       <div class="timeline">
         <div class="role" style="--rc:var(--teal)">
